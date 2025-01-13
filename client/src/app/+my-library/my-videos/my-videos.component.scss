@@ -1,0 +1,30 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+@use '_form-mixins' as *;
+
+input[type=text] {
+  @include peertube-input-text(300px);
+}
+
+.peertube-select-container {
+  @include peertube-select-container(auto);
+}
+
+.action-button {
+  display: flex;
+  align-self: flex-end;
+  min-width: 200px;
+  justify-content: flex-end;
+
+  @include margin-left(10px);
+}
+
+my-edit-button {
+  @include margin-right(10px);
+}
+
+@include on-small-main-col {
+  .action-button {
+    margin: 1rem auto 0;
+  }
+}
